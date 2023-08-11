@@ -20,7 +20,7 @@ There is no installation required for this project. Please use the link in the u
 ## Usage
 
 
-https://sharareh18.github.io/rain-or-shine/
+https://sharareh18.github.io/Rain-or-Shine/
 
 ![weather dashboard with search for city and 5 days forecast blocks](images/weatherdashboard.png)
 
