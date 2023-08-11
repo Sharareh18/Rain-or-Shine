@@ -13,6 +13,8 @@ var currentDate = dayjs();
 var searchedCitiesList = [];
 
 var myKEY = "1daa4de7f71b97407ea5f1450763757e"
+// another key = 16154353b5b9ba4d531848f4e0649aea and another key = 70f96383e48b646503662ed85e183ad7
+// it says all of my keys are unauthorized but on the website it says active. I'm doing something wrong
 
 
 
@@ -25,14 +27,14 @@ var myKEY = "1daa4de7f71b97407ea5f1450763757e"
 
 
 var getWeather = function (city) {
-    var queryUrl = "https://api.openweathermap.org/data/2.5/forecast?q=`+query+`&appid=1daa4de7f71b97407ea5f1450763757e`";
+    var queryUrl = 'https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${myKey}';
     fetch(queryUrl)
       .then(function (response) {
         return response.json();
       })
       .then(function (currentInfo) {
         console.log(currentInfo);
-        var queryWeather = "https://api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid={myKey}&units=imperial";
+        var queryWeather = "https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${myKey}&units=imperial";
         fetch(queryWeather)
           .then(function (response) {
             return response.json();
